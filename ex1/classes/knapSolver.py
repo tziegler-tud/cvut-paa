@@ -5,9 +5,17 @@ from ex1.classes.knapItem import KnapItem
 from ex1.knap_enums.knaptype_enum import KnapTypeEnum
 
 import os
+import time
+from datetime import datetime
+
+from statistics import mean
 
 
 class KnapSolver:
+
+    # KnapSolver object is used to run a certain KnapStrategy on a given set of instances.
+    # The instances are read from the path specified.
+    # The instances are expected to be as described here: https://moodle-vyuka.cvut.cz/mod/page/view.php?id=55370
 
     def __init__(self, knapstrategy, instancePath, solutionPath, knapType):
         self.knapType = knapType
@@ -17,6 +25,8 @@ class KnapSolver:
         self.solutionPath = solutionPath
         self.solutionFilePath = self.generateFilePath(instancePath, solutionPath, "")
         self.solutionFilePath_desc = self.generateFilePath(instancePath, solutionPath, "_desc")
+        self.infoFilePath = self.generateFilePath(instancePath, solutionPath, "_info")
+        self. measureCpuTime = False
 
     def init(self):
         print("initializing knapsack solver...")
@@ -54,6 +64,8 @@ class KnapSolver:
                 solution2 = open(self.solutionFilePath_desc, "w+")
                 solution2.close()
             solution.close()
+            info = open(self.infoFilePath, "w+")
+            info.close()
         except:
             print("Error: failed to write solution file. Check file system permissions.")
 
@@ -61,17 +73,90 @@ class KnapSolver:
         return True
 
     def run(self):
+
+        print("starting solver.")
+
+
+        # init maxRecursionDepth and avgRecursionDepth variables
+        maxRecursionDepth = 0
+        maxRecursionDepthId = 0
+        avgRecursionDepth = 0
+        recDepthList = []
+
+        # init maxCpuTime, avgCpuTime variables
+        maxCpuTime = 0
+        maxCpuTimeId = 0
+        avgCpuTime = 0
+        cpuTimeList = []
+
+        # we dont have information about the instance size here, but we can use the instances to read it later
+        instanceSize = 0
+
+        # process one instance at a time
         for i in self.knapInstanceList:
-            sol = self.knapStrategy.run(i)
+
+            progressOut = "[" + "#" * int(20 * (abs(i.id) / len(self.knapInstanceList))) + \
+                          "-" * (20 - int(20 * (abs(i.id) / len(self.knapInstanceList)))) + "]  " + \
+                          str(int(((abs(i.id) / len(self.knapInstanceList))*100))) + "%"
+            print(progressOut)
+            # guess instance size from last element
+            instanceSize = i.itemnumber
+
+            #   run the strategy. returns a list [<int> recursionDepth, <int> cpuTime, <KnapInstanceSolution> sol]
+            info = self.knapStrategy.run(i, self.measureCpuTime)
+
+            recursionDepth = info[0]
+            cpuTime = info[1]
+            sol = info[2]
+
+            recDepthList.append(int(recursionDepth))
+            cpuTimeList.append(cpuTime)
+
+            if maxRecursionDepth < recursionDepth:
+                maxRecursionDepth = recursionDepth
+                maxRecursionDepthId = i.id
+
+            if maxCpuTime < cpuTime:
+                maxCpuTime = cpuTime
+                maxCpuTimeId = i.id
+
+            # generate optimal solution output
             if isinstance(sol, KnapInstanceSolution):
                 solutionFile = open(self.solutionFilePath, "a+")
                 solutionFile.write(sol.generateSolutionOutput() + "\n")
 
+            # generate decision version solution output.
             if self.knapType.equals(KnapTypeEnum.DECISIVE):
                 descSolutionFile = open(self.solutionFilePath_desc, "a+")
                 descSolutionFile.write(str(1 if sol.decide() else 0) + "\n")
 
+        # generate runtime and complexity information
+        timestamp = datetime.now().strftime("%A, %d %b %Y %H:%M:%S %p")
 
+        avgRecursionDepth = mean(recDepthList)
+        avgCpuTime = mean(cpuTimeList)
+        try:
+            infoFile = open(self.infoFilePath, "a+")
+            infoFile.write("Knapsack Solution Information\n" + "Date: " + str(timestamp) + "\n\n" +
+                           "Type of Knapsack problem: " + self.knapType.getName() + "\n" +
+                           "Strategy: " + self.knapStrategy.getName() +
+                           "\n" +
+                           "Input file: " + self.instancePath + "\n" +
+                           "Solution outputs: \n" + "      " + self.solutionFilePath + "\n" +
+                           str("      " + self.solutionFilePath_desc + "\n" if self.knapType.equals(KnapTypeEnum.DECISIVE) else "") +
+                           "\n" +
+                           "Instance size: " + str(instanceSize) + "\n" +
+                           "Number of instances: " + str(len(self.knapInstanceList)) + "\n" +
+                           "\n" +
+                           "Average visited notes: " + str(avgRecursionDepth) + "\n"
+                           "maximum visited notes: " + str(maxRecursionDepth) + " at instance id: " + str(maxRecursionDepthId) + "\n"
+                           "Average cpu time: " + str(avgCpuTime) + "\n" +
+                           "maximum cpu time: " + str(maxCpuTime) + " at instance id: " + str(maxCpuTimeId) + "\n"
+                           "\n" + "end of generated file.")
+        except:
+            print("failed to write information file.")
+        else:
+            print("Finished Solver. Find evaluation information here: " + self.infoFilePath)
 
     def readInstanceDataFromFile(self, path, knapType):
 
@@ -108,7 +193,7 @@ class KnapSolver:
             else:
                 mincost = None
             for i in range(itemnumber):
-                items.append(KnapItem(data[2*i + offset + 3], data[2*i + offset + 4]))
+                items.append(KnapItem(i, data[2*i + offset + 3], data[2*i + offset + 4]))
 
             knapInstanceList.append(KnapInstance(knapType, instanceid, itemnumber, capacity, mincost, items))
         return knapInstanceList

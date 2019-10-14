@@ -11,12 +11,29 @@ class BruteForceStrategy(KnapStrategy):
         self.instance = None
         self.candidateSolution = None
 
+
+    def runStrategy(self, instance):
+        self.recursionDepth = 0
+        self.instance = instance
+
+        # print("processing instance with id: " + str(instance.id))
+
+        # create vector [x1,...,xn] and initialize with 0s
+        xList = [0 for i in range(instance.itemnumber)]
+
+        # begin recursion
+        self.recursionStep(instance, xList, 0)
+
+        return self.recursionDepth
+
     def recursionStep(self, instance, xList, index):
 
         if index == instance.itemnumber:
-            if self.valid(instance, xList):
-                print("found solution: instance id: " + str(instance.id))
+            # reached node. Incrementing Depth
+            self.recursionDepth += 1
 
+            # check if solution is valid
+            self.valid(instance, xList)
             return
 
         yxList = xList.copy()
@@ -26,17 +43,7 @@ class BruteForceStrategy(KnapStrategy):
         yxList[index] = 1
         self.recursionStep(instance, yxList, index + 1)
 
-    def runStrategy(self, instance):
-        self.instance = instance
-        print("Bruteforce running")
-        print("calculating instance with id: " + str(instance.id))
-        print("Number of items: " + str(instance.itemnumber))
 
-        # create vector [x1,...,xn] and initialize with 0s
-        xList = [0 for i in range(instance.itemnumber)]
-
-        # begin recursion
-        self.recursionStep(instance, xList, 0)
 
 
 

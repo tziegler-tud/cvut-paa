@@ -3,6 +3,8 @@ from ex1.knap_enums.knaptype_enum import KnapTypeEnum
 from ex1.classes.knapInstance import KnapInstance
 from ex1.classes.knapInstanceSolution import KnapInstanceSolution
 
+import time
+
 
 class KnapStrategy:
     def __init__(self, name, knaptype):
@@ -12,15 +14,33 @@ class KnapStrategy:
         self.state = StrategyStateEnum.UNSET
         self.candidateSolutionList = []
         self.optSolutionList = []
+        self.recursionDepth = 0
 
-    def run(self, instance):
+    def run(self, instance, measureCpuTime):
         self.optSolutionList = []
         self.candidateSolutionList = []
-        self.runStrategy(instance)
-        # sol = self.findBestSolution(self.optSolutionList, instance)
-        sol = self.findBestSolution(self.candidateSolutionList, instance)
 
-        return sol
+        # reset process time counter
+        t = time.process_time()
+
+        # run the strategy on the instance
+        recursionDepth = self.runStrategy(instance)
+
+        # measure elapsed time
+        cpuTime = time.process_time() - t
+
+        # repeat several times if time is too short to measure
+        if measureCpuTime and cpuTime < 0.01:
+            # loop amount of times so that cpu time becomes measureable, but at least 4 more times.
+            loops = int(1/cpuTime + 4)
+            for i in range(loops):
+                recursionDepth = self.runStrategy(instance)
+            cpuTime = (time.process_time() - t) / (loops+1)
+
+        sol = self.findBestSolution(self.optSolutionList, instance)
+        # sol = self.findBestSolution(self.candidateSolutionList, instance)
+
+        return [recursionDepth, cpuTime, sol]
 
     def valid(self, instance, xList):
         # print("instance id: " + str(instance.id))
