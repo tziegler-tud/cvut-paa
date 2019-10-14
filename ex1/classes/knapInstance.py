@@ -7,11 +7,16 @@ class KnapInstance:
         self.id = instanceid
         self.itemnumber = itemnumber
         self.capacity = capacity
-        self.minCost = mincost
+        self.mincost = mincost
         self.items = items
 
+    @classmethod
+    def fromInstanceObject(cls, instance):
+        return cls(instance.knaptype, instance.id, instance.itemnumber,
+                   instance.capacity, instance.mincost, instance.items)
+
     def getMinCost(self):
-        return self.minCost
+        return self.mincost
 
     def getCapacity(self):
         return self.capacity
