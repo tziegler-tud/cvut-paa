@@ -1,0 +1,19 @@
+Knapsack Solution Information
+Date: Monday, 14 Oct 2019 18:47:44 PM
+
+Type of Knapsack problem: KnapTypeEnum.DECISIVE
+Strategy: BranchAndBound
+Input file: data/ZR/ZR20_inst.dat
+Solution outputs: 
+      solutions/ZR/bandb/ZR20_sol.dat
+      solutions/ZR/bandb/ZR20_sol_desc.dat
+
+Instance size: 20
+Number of instances: 500
+
+Average visited notes: 147515.232
+maximum visited notes: 293958 at instance id: -297
+Average cpu time: 0.9070974964059997
+maximum cpu time: 2.368582938000003 at instance id: -217
+
+end of generated file.

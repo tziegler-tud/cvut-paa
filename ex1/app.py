@@ -15,11 +15,45 @@ class App:
         # knapSolver.init()
         # knapSolver.run()
         #
-        knapSolver = KnapSolver(knapStrategy, "data/NR/NR20_inst.dat", "solutions/NR/bandb", KnapTypeEnum.DECISIVE)
+        knapSolver = KnapSolver(knapStrategy, "data/ZR/ZR25_inst.dat", "solutions/ZR/bandb", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/NR/NR25_inst.dat", "solutions/NR/bandb", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/NR/NR22_inst.dat", "solutions/NR/bandb", KnapTypeEnum.DECISIVE)
         knapSolver.init()
         knapSolver.run()
 
         # knapSolver = KnapSolver(knapStrategy, "data/NR/NR15_inst.dat", "solutions/NR", KnapTypeEnum.DECISIVE)
         # knapSolver.init()
         # knapSolver.run()
+
+        knapStrategy = BruteForceStrategy("Bruteforce-Naive", KnapTypeEnum.DECISIVE)
+
+        knapSolver = KnapSolver(knapStrategy, "data/NR/NR22_inst.dat", "solutions/NR/bruteforce", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/NR/NR25_inst.dat", "solutions/NR/bandb", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/ZR/ZR4_inst.dat", "solutions/ZR/bruteforce", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/ZR/ZR4_inst.dat", "solutions/ZR/bruteforce", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/ZR/ZR4_inst.dat", "solutions/ZR/bruteforce", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
+
+        knapSolver = KnapSolver(knapStrategy, "data/ZR/ZR4_inst.dat", "solutions/ZR/bruteforce", KnapTypeEnum.DECISIVE)
+        knapSolver.init()
+        knapSolver.run()
 
