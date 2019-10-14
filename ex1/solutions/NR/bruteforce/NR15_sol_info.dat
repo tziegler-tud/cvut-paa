@@ -1,0 +1,19 @@
+Knapsack Solution Information
+Date: Monday, 14 Oct 2019 14:55:02 PM
+
+Type of Knapsack problem: KnapTypeEnum.DECISIVE
+Strategy: BruteForce_Naive
+Input file: data/NR/NR15_inst.dat
+Solution outputs: 
+      solutions/NR/NR15_sol.dat
+      solutions/NR/NR15_sol_desc.dat
+
+Instance size: 15
+Number of instances: 500
+
+Average visited notes: 32768
+maximum visited notes: 32768 at instance id: -1
+Average cpu time: 0.6137361247880011
+maximum cpu time: 1.543350421999996 at instance id: -61
+
+end of generated file.
