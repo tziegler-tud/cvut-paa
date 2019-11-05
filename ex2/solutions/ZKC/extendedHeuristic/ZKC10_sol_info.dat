@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Tuesday, 05 Nov 2019 16:15:27 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristic
+Input file: data/ZKC/ZKC10_inst.dat
+Solution outputs: 
+      solutions/ZKC/extendedHeuristic/ZKC10_sol.dat
+
+Instance size: 10
+Number of instances: 500
+
+Average visited notes: 0
+maximum visited notes: 0 at instance id: 0
+Average cpu time: 6.500236000000015e-05
+maximum cpu time: 0.00011216000000000004 at instance id: 1
+Average error: 0.07437129320160439
+maximum error: 0.5266085861236486 at instance id: 465
+
+end of generated file.

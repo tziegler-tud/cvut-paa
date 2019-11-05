@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Tuesday, 05 Nov 2019 16:10:28 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristic
+Input file: data/NK/NK37_inst.dat
+Solution outputs: 
+      solutions/NK/extendedHeuristic/NK37_sol.dat
+
+Instance size: 37
+Number of instances: 500
+
+Average visited notes: 0
+maximum visited notes: 0 at instance id: 0
+Average cpu time: 0.0002122385699999878
+maximum cpu time: 0.0004551569999997618 at instance id: 371
+Average error: 0.017620437311566654
+maximum error: 0.23246236864527123 at instance id: 339
+
+end of generated file.

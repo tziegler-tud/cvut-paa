@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Monday, 04 Nov 2019 19:25:05 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: simpleHeuristic
+Input file: data/NK/NK15_inst.dat
+Solution outputs: 
+      solutions/NK/simpleHeuristic/NK15_sol.dat
+
+Instance size: 15
+Number of instances: 500
+
+Average visited notes: 0
+maximum visited notes: 0 at instance id: 0
+Average cpu time: 6.695282999999929e-05
+maximum cpu time: 0.00022144200000001613 at instance id: 321
+Average error: 0.02795477330266863
+maximum error: 1.0 at instance id: 239
+
+end of generated file.
