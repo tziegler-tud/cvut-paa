@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Wednesday, 06 Nov 2019 19:09:33 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: dynamicProgramming
+Input file: data/NK/NK35_inst.dat
+Solution outputs: 
+      solutions/NK/dynamic/NK35_sol.dat
+
+Instance size: 35
+Number of instances: 500
+
+Average visited notes: 74419.03
+maximum visited notes: 186410 at instance id: 166
+Average cpu time: 0.07038344644400121
+maximum cpu time: 0.19475525600000765 at instance id: 166
+Average error: 0.0
+maximum error: 0 at instance id: None
+
+end of generated file.
