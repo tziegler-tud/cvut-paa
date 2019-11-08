@@ -3,6 +3,7 @@ from ex2.strategy.knapStrategy import KnapStrategy
 from ex2.strategy.heuristic import SimpleHeuristicStrategy
 from ex2.strategy.extendedHeuristic import ExtendedHeuristicStrategy
 from ex2.strategy.dynamic import DynamicProgrammingStrategy
+from ex2.strategy.dynamicByCost import DynamicProgrammingByCostStrategy
 
 from ex2.knap_enums.knaptype_enum import KnapTypeEnum
 
@@ -14,11 +15,11 @@ class App:
 
         # knapStrategy = ExtendedHeuristicStrategy("extendedHeuristic", KnapTypeEnum.CONSTRUCTIVE)
         # knapStrategy = SimpleHeuristicStrategy("simpleHeuristic", KnapTypeEnum.CONSTRUCTIVE)
-        knapStrategy = DynamicProgrammingStrategy("dynamicProgramming", KnapTypeEnum.CONSTRUCTIVE)
+        knapStrategy = DynamicProgrammingByCostStrategy("dynamicProgrammingByCost", KnapTypeEnum.CONSTRUCTIVE)
 
         for i in sets:
 
-            knapSolver = KnapSolver(knapStrategy, "data/NK/NK"+str(i)+"_inst.dat", "solutions/NK/dynamic",
+            knapSolver = KnapSolver(knapStrategy, "data/NK/NK"+str(i)+"_inst.dat", "solutions/NK/dynamicCost",
                                     KnapTypeEnum.CONSTRUCTIVE, measureRecursionDepth=True, measureCpuTime=True, measureError=True,
                                     instanceSolutionPath="data/NK/NK"+str(i)+"_sol.dat")
             knapSolver.init()
