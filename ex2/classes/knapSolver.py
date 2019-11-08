@@ -133,16 +133,17 @@ class KnapSolver:
             cpuTime = info[1]
             sol = info[2]
 
-            recDepthList.append(int(recursionDepth))
-            cpuTimeList.append(cpuTime)
+            if recursionDepth is not None:
+                recDepthList.append(int(recursionDepth))
+                cpuTimeList.append(cpuTime)
 
-            if maxRecursionDepth < recursionDepth:
-                maxRecursionDepth = recursionDepth
-                maxRecursionDepthId = i.id
+                if maxRecursionDepth < recursionDepth:
+                    maxRecursionDepth = recursionDepth
+                    maxRecursionDepthId = i.id
 
-            if maxCpuTime < cpuTime:
-                maxCpuTime = cpuTime
-                maxCpuTimeId = i.id
+                if maxCpuTime < cpuTime:
+                    maxCpuTime = cpuTime
+                    maxCpuTimeId = i.id
 
             # measure Error if enabled
             if self.measureError:
