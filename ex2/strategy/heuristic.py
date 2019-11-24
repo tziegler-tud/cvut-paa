@@ -37,23 +37,20 @@ class SimpleHeuristicStrategy(KnapStrategy):
 
     def recursionStep(self, instance, candidateItemList, currentWeight, capacity, xList):
 
+        self.recursionDepth = self.recursionDepth + 1
         # get item with highest ratio
         item = candidateItemList[0]
-        # Add to knapsack if item fits in, or return if too heavy.
+        # Add to knapsack if item fits in, or skip if too heavy.
         if item.getWeight() <= (capacity-currentWeight):
             currentWeight = currentWeight + item.getWeight()
             xList[item.id] = 1
 
-            # check if more items in queue
-            if len(candidateItemList) >= 2:
-                # items remaining. Continue with next item
-                self.recursionStep(instance, candidateItemList[1:], currentWeight, capacity, xList)
-            else:
-                # reached leave. returning candidate solution
-                self.valid(instance, xList)
-                return
+        # check if more items in queue
+        if len(candidateItemList) >= 2:
+            # items remaining. Continue with next item
+            self.recursionStep(instance, candidateItemList[1:], currentWeight, capacity, xList)
         else:
-            # item too heavy. add candidate solution
+            # reached leave. returning candidate solution
             self.valid(instance, xList)
             return
 

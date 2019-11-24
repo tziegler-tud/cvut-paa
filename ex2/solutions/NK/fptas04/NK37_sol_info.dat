@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Sunday, 10 Nov 2019 22:50:39 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: fptas0.4
+Input file: data/NK/NK37_inst.dat
+Solution outputs: 
+      solutions/NK/fptas04/NK37_sol.dat
+
+Instance size: 37
+Number of instances: 500
+
+Average visited notes: 64773.31
+maximum visited notes: 105968 at instance id: 323
+Average cpu time: 0.06756107021999955
+maximum cpu time: 0.13184095500000126 at instance id: 323
+Average error: 2.6093729631216982e-05
+maximum error: 0.0009763997046986259 at instance id: 288
+
+end of generated file.

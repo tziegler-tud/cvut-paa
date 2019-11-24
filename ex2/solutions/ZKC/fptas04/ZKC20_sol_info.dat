@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Sunday, 10 Nov 2019 23:07:24 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: fptas0.4
+Input file: data/ZKC/ZKC20_inst.dat
+Solution outputs: 
+      solutions/ZKC/fptas04/ZKC20_sol.dat
+
+Instance size: 20
+Number of instances: 500
+
+Average visited notes: 11237.24
+maximum visited notes: 14380 at instance id: 394
+Average cpu time: 0.015211790708000019
+maximum cpu time: 0.029561908999999886 at instance id: 14
+Average error: 0.0010176197664453354
+maximum error: 0.004748660199443728 at instance id: 109
+
+end of generated file.

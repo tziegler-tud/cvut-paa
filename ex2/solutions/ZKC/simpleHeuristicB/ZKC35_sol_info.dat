@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Monday, 11 Nov 2019 16:28:53 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: simpleHeuristicB
+Input file: data/ZKC/ZKC35_inst.dat
+Solution outputs: 
+      solutions/ZKC/simpleHeuristicB/ZKC35_sol.dat
+
+Instance size: 35
+Number of instances: 500
+
+Average visited notes: 35
+maximum visited notes: 35 at instance id: 1
+Average cpu time: 0.000164929486000001
+maximum cpu time: 0.0008430830000001333 at instance id: 107
+Average error: 0.02788158087167281
+maximum error: 0.06977428130284538 at instance id: 143
+
+end of generated file.

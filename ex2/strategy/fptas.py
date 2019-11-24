@@ -9,7 +9,7 @@ import math
 
 class FptasStrategy(KnapStrategy):
     def __init__(self, name, knaptype, maxError):
-        KnapStrategy.__init__(self, name, knaptype)
+        KnapStrategy.__init__(self, name+str(maxError), knaptype)
         self.StrategyType = KnapTypeEnum.CONSTRUCTIVE
         self.instance = None
         self.candidateSolution = None

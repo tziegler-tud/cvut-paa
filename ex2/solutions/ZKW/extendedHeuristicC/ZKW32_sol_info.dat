@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Monday, 11 Nov 2019 17:37:52 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristicC
+Input file: data/ZKW/ZKW32_inst.dat
+Solution outputs: 
+      solutions/ZKW/extendedHeuristicC/ZKW32_sol.dat
+
+Instance size: 32
+Number of instances: 37
+
+Average visited notes: 64
+maximum visited notes: 64 at instance id: 119
+Average cpu time: 0.0002253547567567313
+maximum cpu time: 0.0003666849999999222 at instance id: 1062
+Average error: 0.002511015398228811
+maximum error: 0.05758157389635317 at instance id: 1482
+
+end of generated file.

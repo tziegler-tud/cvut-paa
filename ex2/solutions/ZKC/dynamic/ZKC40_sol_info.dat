@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Monday, 11 Nov 2019 01:31:36 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: dynamicProgramming
+Input file: data/ZKC/ZKC40_inst.dat
+Solution outputs: 
+      solutions/ZKC/dynamic/ZKC40_sol.dat
+
+Instance size: 40
+Number of instances: 500
+
+Average visited notes: 125188.48
+maximum visited notes: 159200 at instance id: 404
+Average cpu time: 0.1177073588219995
+maximum cpu time: 0.14684115500000416 at instance id: 404
+Average error: 0.0
+maximum error: 0 at instance id: None
+
+end of generated file.

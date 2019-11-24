@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Sunday, 10 Nov 2019 23:25:49 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: fptas0.2
+Input file: data/ZKW/ZKW32_inst.dat
+Solution outputs: 
+      solutions/ZKW/fptas02/ZKW32_sol.dat
+
+Instance size: 32
+Number of instances: 37
+
+Average visited notes: 48435.02702702703
+maximum visited notes: 105280 at instance id: 1972
+Average cpu time: 0.050365123486486044
+maximum cpu time: 0.11240402299999985 at instance id: 1972
+Average error: 3.562959473315413e-05
+maximum error: 0.0013182950051267028 at instance id: 430
+
+end of generated file.

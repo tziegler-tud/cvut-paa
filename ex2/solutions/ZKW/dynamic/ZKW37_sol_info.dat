@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Monday, 11 Nov 2019 01:31:39 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: dynamicProgramming
+Input file: data/ZKW/ZKW37_inst.dat
+Solution outputs: 
+      solutions/ZKW/dynamic/ZKW37_sol.dat
+
+Instance size: 37
+Number of instances: 28
+
+Average visited notes: 3750.214285714286
+maximum visited notes: 16983 at instance id: 724
+Average cpu time: 0.002737246142859005
+maximum cpu time: 0.016093055999988337 at instance id: 724
+Average error: 0.0
+maximum error: 0 at instance id: None
+
+end of generated file.

@@ -3,6 +3,7 @@ from ex2.knap_enums.knaptype_enum import KnapTypeEnum
 from ex2.classes.knapInstance import KnapInstance
 from ex2.classes.knapInstanceSolution import KnapInstanceSolution
 from ex2.classes.knapNode import KnapNode
+from ex2.classes.knapItem import KnapItem
 
 
 class ExtendedHeuristicStrategy(KnapStrategy):
@@ -31,13 +32,16 @@ class ExtendedHeuristicStrategy(KnapStrategy):
         candidateItemList.sort(key=lambda it: (it.getCost()/it.getWeight()), reverse=True)
 
         # find the item with the highest cost that fits into the knapsack
-        ItemListByCost = instance.items.copy()
-        ItemListByCost.sort(key=lambda it: (it.getCost()), reverse=True)
-        highestCostItem = None
-        for item in ItemListByCost:
-            if item.getWeight() <= capacity:
+        # this works, but doesnt allow counting the computation steps:
+        # ItemListByCost = instance.items.copy()
+        # ItemListByCost.sort(key=lambda it: (it.getCost()), reverse=True)
+
+        # let's use this instead
+        highestCostItem = KnapItem(-1, 0, 0)    # create dummy item
+        for item in instance.items:
+            self.recursionDepth = self.recursionDepth + 1
+            if item.getWeight() <= capacity and item.getCost() > highestCostItem.getCost():
                 highestCostItem = item
-                break
 
         # run heuristic solver with sorted item list
 
@@ -46,6 +50,8 @@ class ExtendedHeuristicStrategy(KnapStrategy):
 
     def recursionStep(self, instance, candidateItemList, currentWeight, capacity, xList, highestCostItem):
 
+        self.recursionDepth = self.recursionDepth + 1
+
         # get item with highest ratio
         item = candidateItemList[0]
         # Add to knapsack if item fits in, or return if too heavy.
@@ -53,16 +59,12 @@ class ExtendedHeuristicStrategy(KnapStrategy):
             currentWeight = currentWeight + item.getWeight()
             xList[item.id] = 1
 
-            # check if more items in queue
-            if len(candidateItemList) >= 2:
-                # items remaining. Continue with next item
-                self.recursionStep(instance, candidateItemList[1:], currentWeight, capacity, xList, highestCostItem)
-            else:
-                # reached leave. returning candidate solution
-                self.compareWithHighestCostAndValidate(instance, xList, highestCostItem)
-                return
+        # check if more items in queue
+        if len(candidateItemList) >= 2:
+            # items remaining. Continue with next item
+            self.recursionStep(instance, candidateItemList[1:], currentWeight, capacity, xList, highestCostItem)
         else:
-            # item too heavy. add candidate solution
+            # reached leave. returning candidate solution
             self.compareWithHighestCostAndValidate(instance, xList, highestCostItem)
             return
 
