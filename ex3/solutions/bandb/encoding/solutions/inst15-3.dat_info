@@ -1,0 +1,26 @@
+Knapsack Solution Information
+Date: Tuesday, 17 Dec 2019 02:52:12 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: branchAndBound
+Input file: data/encoding/inst15-3.dat
+Solution outputs: 
+      solutions/bandb/encoding/solutions/inst15-3.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 1627.49
+maximum visited notes: 2683 at instance id: 77
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0.0
+maximum error: 0 at instance id: None
+
+recursion Depth std derivation: 400.89703695889824
+variance: 160718.43424242423
+
+error std derivation: 400.89703695889824
+error variance: 160718.43424242423
+
+end of generated file.

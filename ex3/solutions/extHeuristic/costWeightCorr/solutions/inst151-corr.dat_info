@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Tuesday, 21 Jan 2020 23:25:00 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristicC
+Input file: data/costWeightCorr/inst151-corr.dat
+Solution outputs: 
+      solutions/extHeuristic/costWeightCorr/solutions/inst151-corr.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 30
+maximum visited notes: 30 at instance id: 1
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0.01125632823158884
+maximum error: 0.08949061569956476 at instance id: 40
+
+end of generated file.

@@ -1,5 +1,5 @@
 Knapsack Solution Information
-Date: Thursday, 21 Nov 2019 20:12:45 PM
+Date: Monday, 16 Dec 2019 22:03:19 PM
 
 Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
 Strategy: extendedHeuristicC
@@ -12,8 +12,8 @@ Number of instances: 500
 
 Average visited notes: 20
 maximum visited notes: 20 at instance id: 1
-Average cpu time: 8.945973799999968e-05
-maximum cpu time: 0.0004171760000000191 at instance id: 1
+Average cpu time: 8.397001400000104e-05
+maximum cpu time: 0.00035599899999999574 at instance id: 460
 Average error: 0.09023016223319441
 maximum error: 0.24958402662229617 at instance id: 465
 

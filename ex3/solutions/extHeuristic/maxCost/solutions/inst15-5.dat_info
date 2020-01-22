@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Tuesday, 17 Dec 2019 03:20:08 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristicC
+Input file: data/maxCost/inst15-5.dat
+Solution outputs: 
+      solutions/extHeuristic/maxCost/solutions/inst15-5.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 30
+maximum visited notes: 30 at instance id: 1
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0.011835020472255455
+maximum error: 0.08991077556623199 at instance id: 40
+
+end of generated file.

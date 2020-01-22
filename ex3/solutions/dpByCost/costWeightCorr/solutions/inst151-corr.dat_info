@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Sunday, 19 Jan 2020 14:25:43 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: dynamicProgrammingByCost
+Input file: data/costWeightCorr/inst151-corr.dat
+Solution outputs: 
+      solutions/dpByCost/costWeightCorr/solutions/inst151-corr.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 1128491.4
+maximum visited notes: 1529730 at instance id: 97
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0
+maximum error: 0 at instance id: None
+
+end of generated file.

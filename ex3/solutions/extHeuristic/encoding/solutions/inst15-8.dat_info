@@ -1,0 +1,26 @@
+Knapsack Solution Information
+Date: Tuesday, 17 Dec 2019 02:51:48 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristicC
+Input file: data/encoding/inst15-8.dat
+Solution outputs: 
+      solutions/extHeuristic/encoding/solutions/inst15-8.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 30
+maximum visited notes: 30 at instance id: 1
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0.003663003663003663
+maximum error: 0.003663003663003663 at instance id: 1
+
+recursion Depth std derivation: 0.0
+variance: 0
+
+error std derivation: 0.0
+error variance: 0
+
+end of generated file.

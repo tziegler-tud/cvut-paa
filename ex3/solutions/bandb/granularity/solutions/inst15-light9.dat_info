@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Wednesday, 22 Jan 2020 18:57:58 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: branchAndBound
+Input file: data/granularity/inst15-light9.dat
+Solution outputs: 
+      solutions/bandb/granularity/solutions/inst15-light9.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 1262.63
+maximum visited notes: 1504 at instance id: 98
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0
+maximum error: 0 at instance id: None
+
+end of generated file.

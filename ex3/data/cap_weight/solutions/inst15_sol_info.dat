@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Monday, 16 Dec 2019 23:58:58 PM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: dynamicProgramming
+Input file: data/cap_weight/inst15_4.dat
+Solution outputs: 
+      data/cap_weight/solutions/inst15_sol.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 45004.35
+maximum visited notes: 61935 at instance id: 97
+Average cpu time: 0.04036461980000005
+maximum cpu time: 0.05391058499999879 at instance id: 97
+Average error: 0
+maximum error: 0 at instance id: None
+
+end of generated file.

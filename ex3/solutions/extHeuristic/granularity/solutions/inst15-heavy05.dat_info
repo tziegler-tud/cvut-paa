@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Wednesday, 22 Jan 2020 00:30:57 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: extendedHeuristicC
+Input file: data/granularity/inst15-heavy05.dat
+Solution outputs: 
+      solutions/extHeuristic/granularity/solutions/inst15-heavy05.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 30
+maximum visited notes: 30 at instance id: 1
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0.010402168342892065
+maximum error: 0.07378939277478862 at instance id: 95
+
+end of generated file.

@@ -1,0 +1,20 @@
+Knapsack Solution Information
+Date: Wednesday, 22 Jan 2020 00:17:25 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: dynamicProgramming
+Input file: data/granularity/inst15-light09.dat
+Solution outputs: 
+      solutions/dpByWeight/granularity/solutions/inst15-light09.dat
+
+Instance size: 15
+Number of instances: 100
+
+Average visited notes: 118465.2
+maximum visited notes: 147825 at instance id: 52
+Average cpu time: 0
+maximum cpu time: 0 at instance id: 0
+Average error: 0
+maximum error: 0 at instance id: None
+
+end of generated file.
