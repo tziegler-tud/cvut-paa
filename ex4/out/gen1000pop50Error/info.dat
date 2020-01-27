@@ -1,0 +1,8 @@
+generationCap = 1000
+populationSize = 50
+instanceSize = 30
+elitism = 1
+crossoverRate = 0.8
+mutationRate = 0.02
+
+ZKC30 instances, id 1-10

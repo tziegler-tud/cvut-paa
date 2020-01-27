@@ -1,0 +1,10 @@
+experiment = "crossoverRate"
+vals = [0, 0.1, 0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
+
+        generationCap = 500
+        populationSize = 50
+        instanceSize = 30
+        elitism = 1
+        mutationRate = 0.01
+
+ZKC30 set, instances 1-10

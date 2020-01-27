@@ -42,7 +42,6 @@ class App:
         avgRecList = PropertyList()
         avgErrorList = PropertyList()
 
-
         for i in sets:
 
             knapSolver = KnapSolver(

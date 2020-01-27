@@ -1,0 +1,18 @@
+Knapsack Solution Information
+Date: Monday, 27 Jan 2020 00:59:56 AM
+
+Type of Knapsack problem: KnapTypeEnum.CONSTRUCTIVE
+Strategy: genetic
+Input file: data/genetic/ZKC30_10.dat
+Solution outputs: 
+      solutions/genCap/125/ZKC30_sol.dat
+
+Instance size: 30
+Number of instances: 10
+
+Generations: 125
+Population size: 50
+average error: 0.021204775217851104
+maximum error: 0.031247371519892337 at instance id: 1
+
+end of generated file.
